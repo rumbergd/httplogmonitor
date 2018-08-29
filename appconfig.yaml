@@ -1,0 +1,9 @@
+# Configuration file for httplogmonitor
+INPUTFILE: "http.log"
+STATS:
+  INTERVALSECONDS: 10
+ALERTS:
+  VOLUMEALERT: 
+    STATSINTERVALLOOKBACK: 12 # to evaluate traffic for the last 2 min (12 * 10 sec)
+    THRESHOLD: 100
+    LOGFILE: "volume_alerts.log"
